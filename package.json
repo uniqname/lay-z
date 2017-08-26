@@ -1,0 +1,44 @@
+{
+  "name": "imag",
+  "version": "1.0.0",
+  "description": "A lazy image loader using the intersection observer api",
+  "main": "index.js",
+  "module": "src/imag.js",
+  "scripts": {
+    "build": "babel src/imag.js --out-file index.js",
+    "try-it": "http-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cory Brown <oh.wise.man@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-minify": "^0.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "http-server": "^0.10.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "modules": "umd",
+          "useBuiltIns": true,
+          "targets": {
+            "uglify": true
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
